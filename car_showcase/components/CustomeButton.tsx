@@ -5,11 +5,11 @@ import Image from 'next/image'
 import { CustomButtonProps } from '@/types';
 import { handleClientScriptLoad } from 'next/script';
 
-const CustomeButton = ({ title, containerStyles, handleClick }:  CustomButtonProps) => {
+const CustomeButton = ({ title, btnType, containerStyles, handleClick }:  CustomButtonProps) => {
   return (
     <button 
         disabled={false} 
-        type={"button"} 
+        type={btnType || "button"} 
         className={`custom-btn ${containerStyles}`} 
         onClick={handleClick}
     >
